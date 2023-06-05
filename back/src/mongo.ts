@@ -24,10 +24,10 @@ class MongoAPI {
     // ------------------ Account -------------------
     async getAdmin() {
         try {
-            const db = mongoose.connection.useDb("shop_cart");
+            const db = mongoose.connection.useDb("aaditya-fashion");
             const collection = db.collection("accounts");
             const account = await collection.findOne();
-            console.log("fetch account")
+            console.log("fetch account "+account!!.password)
             return account;
 
         } catch (error) {
