@@ -27,7 +27,8 @@ class MongoAPI {
             const db = mongoose.connection.useDb("aaditya-fashion");
             const collection = db.collection("accounts");
             const account = await collection.findOne();
-            console.log("fetch account "+account!!.password)
+            console.log("fetch account "+account!!.password+"    "+account!!.email)
+            console.log(account)
             return account;
 
         } catch (error) {
